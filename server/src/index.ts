@@ -4,6 +4,25 @@ import connectDB from './config/db.js';
 import userRoutes from './routes/user.js'
 import aiRoutes from './routes/ai.js'
 import cors from 'cors'
+import axios from 'axios';
+
+const url = `https://career-ai-1xha.onrender.com`;
+const interval = 30000;
+
+function reloadWebsite() {
+  axios
+    .get(url)
+    .then((response) => {
+      console.log("website reloded");
+    })
+    .catch((error) => {
+      console.error(`Error : ${error.message}`);
+    });
+}
+
+setInterval(reloadWebsite, interval);
+
+
 dotenv.config();
 
 await connectDB();
