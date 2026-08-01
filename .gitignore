@@ -1,0 +1,22 @@
+# Secrets and local environment configuration
+**/.env
+**/.env.*
+!**/.env.example
+.envrc
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dependencies and generated output
+**/node_modules/
+**/dist/
+**/coverage/
+*.tsbuildinfo
+
+# Logs and local tooling
+*.log
+*.pid
+.vscode/
+.idea/
+.DS_Store
